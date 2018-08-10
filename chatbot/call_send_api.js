@@ -1,3 +1,5 @@
+const request = require('request');
+
 const callSendAPI = function callSendAPI(sender_psid, response) {
     // Construct the message body
     let request_body = {
