@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const handleMessage = require('../chatbot/handle_message');
+const handlePostback = require('../chatbot/handle_postback');
+
 // Creates the endpoint for our webhook 
 router.post('/', (req, res) => { // 사용자들에게 요청이 들어왔을 때 어떻게 처리를 할지 정하는 부분
 
