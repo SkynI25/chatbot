@@ -21,13 +21,13 @@ router.post('/', (req, res) => { // 사용자들에게 요청이 들어왔을 �
       console.log(webhook_event);
 
       // Get the sender PSID
-      let sender_psid = webhook_event.sender.id; // psid 확인하는 부분
+      let sender_psid = webhook_event.sender.id; // psid 확인하는 부분, webhook_event 부분 페이스북 api에서 한번 더 확인해보자.
       console.log('Sender PSID: ' + sender_psid); // 누가 보냈는지 확인할 수 있음
 
       // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
-        handleMessage(sender_psid, webhook_event.message);
+        handleMessage(sender_psid, webhook_event.message); // 메시지를 어떻게 처리 할지
       } else if (webhook_event.postback) {
         handlePostback(sender_psid, webhook_event.postback);
       }
@@ -43,7 +43,7 @@ router.post('/', (req, res) => { // 사용자들에게 요청이 들어왔을 �
 });
 
 // Adds support for GET requests to our webhook
-router.get('/', (req, res) => {
+router.get('/', (req, res) => { // 인증 부분만 다룸
 
   // Your verify token. Should be a random string.
   let VERIFY_TOKEN = "asdkfjdashfuiwhoiu" // 우리 서버인지 확인해주는 용도, 인증부분 담당

@@ -11,7 +11,7 @@ const callSendAPI = function callSendAPI(sender_psid, response) {
   
     // Send the HTTP request to the Messenger Platform
     request({
-      "uri": "https://graph.facebook.com/v2.6/me/messages",
+      "uri": "https://graph.facebook.com/v2.6/me/messages", // url 을 지정해주므로 페이스북에서 지정된 형식으로 요청에 대한 답을 해줌
       "qs": { "access_token": "EAAPoQa1r4CkBAFrZCZBIRmdfqzz8TvBjPWRwVQpxXhgKfCqJ52DhDSGjWDmnYVZCXl4SQA1lqZCHolrV7w7NTYckYE2Nwf1JsPoZBaFKS2BR0Sk3xDepuBiIuAZA2uAyEZAmuYqUtqW2iJUrODNAX3XCd4aGd5vJQbZAHYSi3lORvwZDZD" },
       "method": "POST",
       "json": request_body

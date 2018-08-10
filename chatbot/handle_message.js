@@ -9,7 +9,7 @@ const handleMessage = function(sender_psid, received_message) {
       // Creates the payload for a basic text message, which
       // will be added to the body of our request to the Send API
       response = {
-        "text": `당신이 보낸 메시지: "${received_message.text}". !` // 사용자에게 보내는 메시지
+        "text": `당신이 보낸 메시지: "${received_message.text}". !` // 사용자에게 보내는 메시지, 추후 자연어 처리(NLP)를 통해 제어문으로 어떻게 해줄지 선택하면 됨.
       }
   
     } else if (received_message.attachments) {
