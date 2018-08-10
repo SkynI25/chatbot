@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // Creates the endpoint for our webhook 
-router.post('/webhook', (req, res) => {  
+router.post('/', (req, res) => {  
  
     let body = req.body;
   
