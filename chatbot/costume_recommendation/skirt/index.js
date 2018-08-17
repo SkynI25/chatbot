@@ -2,7 +2,7 @@ const callSendAPI = require('../../call_send_api');
 const e = function (psid, payload) {
   let response;
   if (payload.length === 2) {
-    if (payload[payload.length - 1] === "치마") {
+    if (payload[payload.length - 1] === "n") {
       
       let aaa = JSON.parse(JSON.stringify(payload))
       aaa.push("롱")

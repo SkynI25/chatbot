@@ -2,7 +2,7 @@ const callSendAPI = require('../../call_send_api');
 const e = function (psid, payload) {
   let response;
   if (payload.length === 2) {
-    if (payload[payload.length - 1] === "바지") {
+    if (payload[payload.length - 1] === "y") {
       response = {
         "attachment": {
           "type": "template",
