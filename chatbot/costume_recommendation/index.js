@@ -14,12 +14,12 @@ e = function (payload) {
             "buttons": [{
                 "type": "postback",
                 "title": "밝은 계열",
-                "payload": ["의상추천", "a", "y"] 
+                "payload": `["의상추천", "a", "y"]`
               },
               {
                 "type": "postback",
                 "title": "어두운 계열",
-                "payload": ["의상추천", "a", "n"]
+                "payload": `["의상추천", "a", "n"]`
               }
             ]
           }
