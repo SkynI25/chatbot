@@ -5,22 +5,22 @@ const skirt = require("./skirt");
 const e = function (psid, payload) {
   let response;
   if (payload.length === 1) {
-    if (payload[payload.length - 1] === "의상추천") {
+    if (payload[payload.length - 1] === "a") {
       response = {
         "attachment": {
           "type": "template",
           "payload": {
             "template_type": "button",
-            "text": "어떤 의상을 추천해드릴까요?",
+            "text": "밝은 계열이 좋으세요, 어두운 계열이 좋으세요?",
             "buttons": [{
                 "type": "postback",
-                "title": "치마",
-                "payload": `["의상추천", "치마"]`
+                "title": "밝은 계열",
+                "payload": `["a", "y"]`
               },
               {
                 "type": "postback",
-                "title": "바지",
-                "payload": `["의상추천", "바지"]`
+                "title": "밝은 계열",
+                "payload": `["a", "n"]`
               }
             ]
           }

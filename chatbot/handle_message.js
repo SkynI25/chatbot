@@ -17,12 +17,12 @@ const handleMessage = function(sender_psid, received_message) {
                 {
                   "type": "postback",
                   "title": "회사에서 입을 옷",
-                  "payload": `["의상추천", "치마"]`
+                  "payload": `["a"]`
                 },
                 {
                   "type": "postback",
                   "title": "소개팅할때",
-                  "payload": `["의상추천", "바지"]`
+                  "payload": `["b"]`
                 }
               ]
             }
@@ -41,12 +41,12 @@ const handleMessage = function(sender_psid, received_message) {
                 {
                   "type": "postback",
                   "title": "데이트 할 때",
-                  "payload": `["의상추천", "ㅁ"]`
+                  "payload": `["c"]`
                 },
                 {
                   "type": "postback",
                   "title": "일상에서 편하게",
-                  "payload": `["의상추천", "ㄴ"]`
+                  "payload": `["d"]`
                 }
               ]
             }
