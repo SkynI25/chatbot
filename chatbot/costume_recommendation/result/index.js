@@ -1,5 +1,5 @@
 const callSendAPI = require('../../call_send_api');
-const fianl = require('../final');
+const final = require('../final');
 
 const e = function (psid, payload) {
     let response;
