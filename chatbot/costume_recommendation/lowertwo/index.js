@@ -1,5 +1,5 @@
 const callSendAPI = require('../../call_send_api');
-const request = require('request');
+const cloth = require('../cloth');
 
 const e = function (psid, payload) {
   let response;
@@ -19,6 +19,9 @@ const e = function (psid, payload) {
   // });
 
   callSendAPI(psid, response);
+
+  response = cloth(psid, payload);
+
   return response;
 }
 
