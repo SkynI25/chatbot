@@ -1,4 +1,5 @@
-e = function (payload) {
+const callSendAPI = require('../../call_send_api');
+const e = function (psid, payload) {
   let response;
   if (payload.length === 2) {
     if (payload[payload.length - 1] === "바지") {
@@ -22,6 +23,7 @@ e = function (payload) {
           }
         }
       }
+      callSendAPI(psid, response);
     }
   }
   return response;

@@ -1,7 +1,8 @@
+const callSendAPI = require('../call_send_api');
 const pants = require("./pants");
 const skirt = require("./skirt");
 
-e = function (payload) {
+const e = function (psid, payload) {
   let response;
   if (payload.length === 1) {
     if (payload[payload.length - 1] === "의상추천") {
@@ -25,11 +26,12 @@ e = function (payload) {
           }
         }
       }
+      callSendAPI(psid, response);
     }
   } else {
-    response = pants(payload);
+    response = pants(psid, payload);
     if (!response) {
-      response = skirt(payload);
+      response = skirt(psid, payload);
     }
   }
   return response;
