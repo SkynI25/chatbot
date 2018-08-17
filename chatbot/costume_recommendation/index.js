@@ -1,6 +1,6 @@
 const callSendAPI = require('../call_send_api');
-const pants = require("./pants");
-const skirt = require("./skirt");
+const black = require("./black");
+const white = require("./white");
 
 const e = function (psid, payload) {
   let response;
@@ -95,9 +95,9 @@ const e = function (psid, payload) {
       callSendAPI(psid, response);
     }
     } else {
-      response = pants(psid, payload);
+      response = black(psid, payload);
       if (!response) {
-        response = skirt(psid, payload);
+        response = white(psid, payload);
       }
     }
   return response;
