@@ -22,7 +22,6 @@ e = function (payload) {
           }
         }
       }
-      console.log(response)
     }
   }
   return response;
