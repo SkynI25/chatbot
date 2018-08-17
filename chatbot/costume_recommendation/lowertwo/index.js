@@ -1,4 +1,3 @@
-const callSendAPI = require('../../call_send_api');
 const cloth = require('../cloth');
 
 const e = function (psid, payload) {
@@ -17,8 +16,6 @@ const e = function (psid, payload) {
   //     console.error("Unable to send message:" + err);
   //   }
   // });
-
-  callSendAPI(psid, response);
 
   response = cloth(psid, payload);
 
