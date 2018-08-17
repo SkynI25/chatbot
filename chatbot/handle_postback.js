@@ -9,9 +9,6 @@ const handlePostback = function (psid, payload) { // 이미지 밑에 버튼,이
     console.log(JSON.stringify(payload, null, 4))
 
     payloadData = JSON.parse(payload.payload);
-
-
-    console.log(payloadData);
     
     response = costumeRecommendation(payloadData);
     // if (!response)
