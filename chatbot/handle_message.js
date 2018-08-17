@@ -36,7 +36,7 @@ const handleMessage = function(sender_psid, received_message) {
             "type": "template",
             "payload": {
               "template_type":"button",
-              "text":"(3, 4번째 옵션)",
+              "text":"(옵션들)",
               "buttons":[
                 {
                   "type": "postback",
