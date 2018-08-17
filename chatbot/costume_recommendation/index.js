@@ -93,13 +93,13 @@ const e = function (psid, payload) {
         }
       }
       callSendAPI(psid, response);
+    }
     } else {
       response = pants(psid, payload);
       if (!response) {
         response = skirt(psid, payload);
       }
     }
-  }
   return response;
 }
 
