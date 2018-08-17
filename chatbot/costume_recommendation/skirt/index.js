@@ -2,7 +2,7 @@
 e = function (payload) {
     let response;
     if (payload.length == 2) {
-        if (payload[1] === "치마") {
+        if (payload[payload.length-1] === "치마") {
             response = {
               "attachment": {
                 "type": "template",
