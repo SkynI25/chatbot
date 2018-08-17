@@ -1,6 +1,10 @@
 const callSendAPI = require('../../call_send_api');
 const uppertwo = require("../uppertwo");
 const lowertwo = require("../lowertwo");
+const result = require('../result');
+const result2 = require('../result2');
+
+
 const e = function (psid, payload) {
   let response;
   if (payload.length === 3) {
@@ -28,9 +32,9 @@ const e = function (psid, payload) {
       callSendAPI(psid, response);
     }
   } if (payload[payload.length - 1] === "a") {
-    response = lowertwo(psid, payload);
+    response = result(psid, payload);
   } else {
-    response = uppertwo(psid, payload);
+    response = result2(psid, payload);
   }
   return response;
 }
