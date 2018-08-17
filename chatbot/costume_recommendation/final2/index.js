@@ -53,8 +53,6 @@ const e = function (psid, payload) {
   }
   if (payload[payload.length - 1] === "y") {
     response = webhook(psid, payload);
-  } else {
-    response = webhook(psid, payload);
   }
   return response;
 }
