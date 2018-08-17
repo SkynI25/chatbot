@@ -3,7 +3,7 @@ const skirt = require("./skirt");
 
 e = function (payload) {
   let response;
-  if (payload.length == 1) {
+  if (payload.length === 1) {
     if (payload[payload.length - 1] === "의상추천") {
       response = {
         "attachment": {

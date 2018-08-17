@@ -1,9 +1,10 @@
 e = function (payload) {
   console.log(payload.length);
   console.log(payload[payload.length - 1]);
+  console.log(payload[payload.length - 1] === "치마");
 
   let response;
-  if (payload.length == 2) {
+  if (payload.length === 2) {
     if (payload[payload.length - 1] === "치마") {
       response = {
         "attachment": {
