@@ -1,23 +1,25 @@
 const callSendAPI = require('../../call_send_api');
+const uppertwo = require("../uppertwo");
+const lowertwo = require("../lowertwo");
 const e = function (psid, payload) {
   let response;
-  if (payload.length === 2) {
-    if (payload[payload.length - 1] === "y") {
+  if (payload.length === 3) {
+    if (payload[payload.length - 1] === "a") {
       response = {
         "attachment": {
           "type": "template",
           "payload": {
             "template_type": "button",
-            "text": "무난한 옷이 좋으세요, 포인트 있는 옷이 좋으세요?",
+            "text": "원하시는 가격대가 있다면요?",
             "buttons": [{
                 "type": "postback",
-                "title": "무난한 옷",
-                "payload": `["a", "y", "a"]`
+                "title": "2만원 이하",
+                "payload": `["a", "y", "a", "a"]`
               },
               {
                 "type": "postback",
-                "title": "포인트 있는 옷",
-                "payload": `["a", "y", "b"]`
+                "title": "2만원 이상",
+                "payload": `["a", "y", "a", "b"]`
               }
             ]
           }

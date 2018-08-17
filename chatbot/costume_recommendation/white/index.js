@@ -1,6 +1,6 @@
 const callSendAPI = require('../../call_send_api');
-const plain = require("./plain");
-const point = require("./point");
+const plain = require("../plain");
+const point = require("../point");
 
 const e = function (psid, payload) {
   let response;
