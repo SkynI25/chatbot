@@ -69,5 +69,4 @@ router.get('/', (req, res) => { // 인증 부분만 다룸
     }
   }
 });
-
 module.exports = router;
