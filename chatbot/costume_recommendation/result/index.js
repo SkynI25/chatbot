@@ -27,7 +27,7 @@ const e = function (psid, payload) {
           }
       callSendAPI(psid, response);
   } if (payload.length === 1) {
-    response = fianl(psid, payload);
+    response = final(psid, payload);
   } 
     return response;
 }
