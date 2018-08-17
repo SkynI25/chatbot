@@ -11,7 +11,7 @@ const e = function (psid, payload) {
           "type": "template",
           "payload": {
             "template_type": "button",
-            "text": "링크를 클릭하면 당신이 찾는 옷이 기다리고 있어요 🙂\nhttps://smartstore.naver.com/iamieun/products/3167311788?NaPm=ct%3Djkxqs0z4%7Cci%3D5d0c4e3695de08ffd3078ecdd085a8942d0b540e%7Ctr%3Dslsl%7Csn%3D323635%7Cic%3D%7Chk%3D6add83531bf14c00f2f3d96e0b04c67b398b7bdf\n결과가 마음에 드시나요?",
+            "text": "링크를 클릭하면 당신이 찾는 옷이 기다리고 있어요 🙂\n\nhttps://smartstore.naver.com/iamieun/products/3167311788?NaPm=ct%3Djkxqs0z4%7Cci%3D5d0c4e3695de08ffd3078ecdd085a8942d0b540e%7Ctr%3Dslsl%7Csn%3D323635%7Cic%3D%7Chk%3D6add83531bf14c00f2f3d96e0b04c67b398b7bdf\n\n결과가 마음에 드시나요?",
             "buttons": [{
                 "type": "postback",
                 "title": "예",

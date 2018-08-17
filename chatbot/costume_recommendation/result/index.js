@@ -11,7 +11,7 @@ const e = function (psid, payload) {
           "type": "template",
           "payload": {
             "template_type": "button",
-            "text": "링크를 클릭하면 당신이 찾는 옷이 기다리고 있어요 🙂\nhttps://smartstore.naver.com/immood/products/2596770152?NaPm=ct%3Djkxqtlaw%7Cci%3D02ce2c6307c872a792c62e1e8468d84da393ca4f%7Ctr%3Dslsl%7Csn%3D342127%7Cic%3D%7Chk%3D0180544fbe4dafee6f9b5384cdbfd5cd6f19f605\n결과가 마음에 드시나요?",
+            "text": "링크를 클릭하면 당신이 찾는 옷이 기다리고 있어요 🙂\n\nhttps://smartstore.naver.com/immood/products/2596770152?NaPm=ct%3Djkxqtlaw%7Cci%3D02ce2c6307c872a792c62e1e8468d84da393ca4f%7Ctr%3Dslsl%7Csn%3D342127%7Cic%3D%7Chk%3D0180544fbe4dafee6f9b5384cdbfd5cd6f19f605\n\n결과가 마음에 드시나요?",
             "buttons": [{
                 "type": "postback",
                 "title": "예",
@@ -28,6 +28,7 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
   }
+  console.log(payload);
   if (payload[payload.length - 1] === "y") {
     response = final(psid, payload);
   } else {
