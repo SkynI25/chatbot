@@ -12,17 +12,27 @@ const handleMessage = function(sender_psid, received_message) {
             "type": "template",
             "payload": {
               "template_type":"button",
-              "text":"어떤 의상을 추천해드릴까요?",
+              "text":"어떤 옷을 추천해드릴까요?",
               "buttons":[
                 {
                   "type": "postback",
-                  "title": "치마",
-                  "payload": `["의상추천", "치마"]`
+                  "title": "회사에서 입을 옷",
+                  "payload": ["의상추천", "a"]
                 },
                 {
                   "type": "postback",
-                  "title": "바지",
-                  "payload": `["의상추천", "바지"]`
+                  "title": "소개팅할때",
+                  "payload": ["의상추천", "b"]
+                },
+                {
+                  "type": "postback",
+                  "title": "데이트할때",
+                  "payload": ["의상추천", "c"]
+                },
+                {
+                  "type": "postback",
+                  "title": "일상에서 편하게",
+                  "payload": ["의상추천", "d"]
                 }
               ]
             }
