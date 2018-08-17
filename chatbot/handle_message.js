@@ -16,12 +16,22 @@ const handleMessage = function(sender_psid, received_message) {
               "buttons":[
                 {
                   "type": "postback",
-                  "title": "치마",
+                  "title": "회사에서 입을 옷",
                   "payload": `["의상추천", "치마"]`
                 },
                 {
                   "type": "postback",
-                  "title": "바지",
+                  "title": "소개팅할때",
+                  "payload": `["의상추천", "바지"]`
+                },
+                {
+                  "type": "postback",
+                  "title": "데이트할때",
+                  "payload": `["의상추천", "치마"]`
+                },
+                {
+                  "type": "postback",
+                  "title": "일상에서 편하게",
                   "payload": `["의상추천", "바지"]`
                 }
               ]
