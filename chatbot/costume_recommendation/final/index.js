@@ -51,7 +51,9 @@ const e = function (psid, payload) {
       callSendAPI(psid, response);
     }
   }
-  if (payload.length === 2) {
+  if (payload[payload.length - 1] === "y") {
+    response = webhook(psid, payload);
+  } else {
     response = webhook(psid, payload);
   }
   return response;
