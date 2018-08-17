@@ -28,11 +28,10 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
     }
+  } if (payload[payload.length - 1] === "a") {
+    response = plain(psid, payload);
   } else {
     response = point(psid, payload);
-      if (!response) {
-        response = plain(psid, payload);
-      }
   }
   return response;
 }

@@ -27,7 +27,7 @@ const e = function (psid, payload) {
         }
       }
       callSendAPI(psid, response);
-    } else if(payload[payload.length - 1] === "b") {
+    } else if (payload[payload.length - 1] === "b") {
       response = {
         "attachment": {
           "type": "template",
@@ -49,7 +49,7 @@ const e = function (psid, payload) {
         }
       }
       callSendAPI(psid, response);
-    } else if(payload[payload.length - 1] === "c") {
+    } else if (payload[payload.length - 1] === "c") {
       response = {
         "attachment": {
           "type": "template",
@@ -71,7 +71,7 @@ const e = function (psid, payload) {
         }
       }
       callSendAPI(psid, response);
-    } else if(payload[payload.length - 1] === "d") {
+    } else if (payload[payload.length - 1] === "d") {
       response = {
         "attachment": {
           "type": "template",
@@ -94,13 +94,12 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
     }
-    }
-    if(payload[payload.length - 1] === "y") {
-      response = white(psid, payload);
-    }
-      else {
-        response = black(psid, payload);
-      }
+  }
+  if (payload[payload.length - 1] === "y") {
+    response = white(psid, payload);
+  } else {
+    response = black(psid, payload);
+  }
   return response;
 }
 

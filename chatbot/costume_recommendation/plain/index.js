@@ -27,11 +27,10 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
     }
+  } if (payload[payload.length - 1] === "a") {
+    response = lowertwo(psid, payload);
   } else {
     response = uppertwo(psid, payload);
-      if (!response) {
-        response = lowertwo(psid, payload);
-      }
   }
   return response;
 }
