@@ -94,12 +94,13 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
     }
-    } else {
-      response = black(psid, payload);
-      if (!response) {
-        response = white(psid, payload);
-      }
     }
+    if(payload[payload.length - 1] === "y") {
+      response = white(psid, payload);
+    }
+      else {
+        response = black(psid, payload);
+      }
   return response;
 }
 
