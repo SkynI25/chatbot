@@ -6,23 +6,23 @@ const handleMessage = function(sender_psid, received_message) {
     // Checks if the message contains text
     if (received_message.text) {
       
-      if (received_message.text === "test") {
+      if (received_message.text === "의상추천") {
         response = {
           "attachment": {
             "type": "template",
             "payload": {
               "template_type":"button",
-              "text":"test를 예약하시겠습니까?",
+              "text":"어떤 의상을 추천해드릴까요?",
               "buttons":[
                 {
                   "type": "postback",
-                  "title": "예",
-                  "payload": `{"element": "test", "choise": "yes"}`
+                  "title": "치마",
+                  "payload": `["의상추천", "치마"]`
                 },
                 {
                   "type": "postback",
-                  "title": "아니요",
-                  "payload": `{"element": "test", "choise": "no"}`
+                  "title": "바지",
+                  "payload": `["의상추천", "바지"]`
                 }
               ]
             }

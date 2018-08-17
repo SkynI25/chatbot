@@ -1,6 +1,20 @@
-const handlePostback = function(psid, payload) { // 이미지 밑에 버튼,이 있고 이를 선택할지 말지를 처리하는 부분
+const callSendAPI = require('./call_send_api');
+
+const costumeRecommendation = require("./costume_recommendation");
+
+const handlePostback = function (psid, payload) { // 이미지 밑에 버튼,이 있고 이를 선택할지 말지를 처리하는 부분
+    let response;
+
     console.log(psid)
     console.log(JSON.stringify(payload, null, 4))
+
+    payloadData = JSON.parse(payload.payload);
+
+    response = costumeRecommendation(payloadData);
+    // if (!response)
+    //     eieieieiei
+
+    callSendAPI(response);
 }
 
 module.exports = handlePostback;
