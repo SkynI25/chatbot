@@ -2,11 +2,10 @@ const pants = require("./pants");
 const skirt = require("./skirt");
 
 e = function (payload) {
+    console.log(payload[payload.length-1]);
+    console.log(payload[payload.length-1] === "의상추천");
     let response;
     if (payload.length == 1) {
-      
-        console.log(payload[payload.length-1]);
-        console.log(payload[payload.length-1] === "의상추천");
         if (payload[payload.length-1] === "의상추천") {
             response = {
               "attachment": {
