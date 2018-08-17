@@ -19,7 +19,7 @@ const e = function (psid, payload) {
               },
               {
                 "type": "postback",
-                "title": "밝은 계열",
+                "title": "어두운 계열",
                 "payload": `["a", "n"]`
               }
             ]
@@ -28,6 +28,72 @@ const e = function (psid, payload) {
       }
       callSendAPI(psid, response);
     }
+  } else if(payload[payload.length - 1] === "b") {
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "밝은 계열이 좋으세요, 어두운 계열이 좋으세요?",
+          "buttons": [{
+              "type": "postback",
+              "title": "밝은 계열",
+              "payload": `["b", "y"]`
+            },
+            {
+              "type": "postback",
+              "title": "어두운 계열",
+              "payload": `["b", "n"]`
+            }
+          ]
+        }
+      }
+    }
+    callSendAPI(psid, response);
+  } else if(payload[payload.length - 1] === "c") {
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "밝은 계열이 좋으세요, 어두운 계열이 좋으세요?",
+          "buttons": [{
+              "type": "postback",
+              "title": "밝은 계열",
+              "payload": `["c", "y"]`
+            },
+            {
+              "type": "postback",
+              "title": "어두운 계열",
+              "payload": `["c", "n"]`
+            }
+          ]
+        }
+      }
+    }
+    callSendAPI(psid, response);
+  } else if(payload[payload.length - 1] === "d") {
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "밝은 계열이 좋으세요, 어두운 계열이 좋으세요?",
+          "buttons": [{
+              "type": "postback",
+              "title": "밝은 계열",
+              "payload": `["d", "y"]`
+            },
+            {
+              "type": "postback",
+              "title": "어두운 계열",
+              "payload": `["d", "n"]`
+            }
+          ]
+        }
+      }
+    }
+    callSendAPI(psid, response);
   } else {
     response = pants(psid, payload);
     if (!response) {
