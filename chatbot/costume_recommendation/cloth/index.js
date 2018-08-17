@@ -1,5 +1,6 @@
 const callSendAPI = require('../../call_send_api');
 const result = require('../result');
+const result2 = require('../result2');
 
 const e = function (psid, payload) {
     let response;
@@ -13,7 +14,9 @@ const e = function (psid, payload) {
     }
   } if (payload[payload.length - 1] === "a") {
     response = result(psid, payload);
-  } 
+  } else {
+    response = result2(psid, payload);
+  }
     return response;
 }
 
