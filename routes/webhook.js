@@ -4,6 +4,21 @@ var router = express.Router();
 const handleMessage = require('../chatbot/handle_message');
 const handlePostback = require('../chatbot/handle_postback');
 
+// var bodyParser = require('body-parser')
+// router.use(bodyParser.json())
+// router.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+
+// var mysql = require('mysql');
+
+// var mysqlPool = mysql.createPool({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '111111',
+//     database: 'kitae'
+// });
+
 // Creates the endpoint for our webhook 
 router.post('/', (req, res) => { // 사용자들에게 요청이 들어왔을 때 어떻게 처리를 할지 정하는 부분
 
@@ -69,5 +84,25 @@ router.get('/', (req, res) => { // 인증 부분만 다룸
     }
   }
 });
+
+// router.post('/data', function (req, res) {
+//   var payload = req.body.payload;
+//   var sql = "SELECT image_url where dress_code = '" + payload[0] + "' and dress_color = '" + payload[1] + "' and dress_point  = '" + payload[2] + "' and dress_price = '" + payload[3] + "';";
+//   mysqlPool.getConnection(function (err, conn) {
+//       if (err) throw err;
+//       conn.query(sql, function (err, datas, fields) {
+//         let webhook_event = entry.messaging[0];
+//       let sender_psid = webhook_event.sender.id; // psid 확인하는 부분, webhook_event 부분 페이스북 api에서 한번 더 확인해보자.
+//           if (err) {
+//               conn.release();
+//               console.log(err);
+//               return;
+//           }
+//           res.respond("ok");
+//           handleMessage2(sender_psid, webhook_event.message); // 메시지를 어떻게 처리 할지
+//           conn.release();
+//       });
+//   });
+// });
 
 module.exports = router;
