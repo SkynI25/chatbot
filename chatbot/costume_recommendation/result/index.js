@@ -1,11 +1,11 @@
 const callSendAPI = require('../../call_send_api');
 const final = require('../final');
+const final2 = require('../final2');
 
 const e = function (psid, payload) {
   let response;
 
   if (payload.length === 4) {
-    if (payload[payload.length - 1] === "b") {
       response = {
         "attachment": {
           "type": "template",
@@ -27,12 +27,11 @@ const e = function (psid, payload) {
         }
       }
       callSendAPI(psid, response);
-    }
   }
   if (payload[payload.length - 1] === "y") {
     response = final(psid, payload);
   } else {
-    response = final(psid, payload);
+    response = final2(psid, payload);
   }
   return response;
 }
